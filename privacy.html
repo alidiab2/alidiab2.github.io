@@ -6,46 +6,112 @@
 <title>Coffer — Privacy Policy</title>
 <style>
   :root { color-scheme: light dark; }
-  body { font: 17px/1.6 -apple-system, system-ui, Segoe UI, Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; color: #1c1c1e; background: #fff; }
-  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #000; } a { color: #4aa3f0; } }
-  h1 { font-size: 30px; letter-spacing: -0.4px; }
-  h2 { font-size: 20px; margin-top: 34px; }
-  .muted { color: #8a8a8e; font-size: 15px; }
-  code { background: rgba(127,127,127,.15); padding: 1px 5px; border-radius: 5px; }
+  * { box-sizing: border-box; }
+  body {
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; padding: 0;
+    color: #1c1c1e; background: #f2f2f7;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 22px 80px; }
+  header { margin-bottom: 32px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 15px; letter-spacing: .2px;
+    padding: 6px 12px; border-radius: 999px;
+    background: rgba(10,132,255,.12); color: #0a84ff;
+  }
+  h1 { font-size: 30px; margin: 18px 0 6px; letter-spacing: -.3px; }
+  .updated { color: #6c6c70; font-size: 14px; margin: 0; }
+  h2 { font-size: 20px; margin: 34px 0 8px; letter-spacing: -.2px; }
+  p, li { color: #3a3a3c; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .card {
+    background: #fff; border-radius: 16px; padding: 4px 22px 18px;
+    margin: 22px 0; border: 1px solid rgba(0,0,0,.06);
+  }
+  .lead {
+    font-size: 18px; color: #1c1c1e;
+    background: rgba(10,132,255,.08); border-radius: 14px;
+    padding: 16px 18px; margin: 0 0 8px;
+  }
+  strong { color: #1c1c1e; }
+  a { color: #0a84ff; }
+  footer { margin-top: 44px; color: #8e8e93; font-size: 13px; }
+  code { background: rgba(120,120,128,.14); padding: 2px 6px; border-radius: 6px; font-size: 90%; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f2f2f7; background: #000; }
+    p, li { color: #c7c7cc; }
+    h1, strong, .lead { color: #f2f2f7; }
+    .updated { color: #98989d; }
+    .card { background: #1c1c1e; border-color: rgba(255,255,255,.08); }
+    .lead { background: rgba(10,132,255,.16); }
+    footer { color: #8e8e93; }
+  }
 </style>
 </head>
 <body>
-<h1>Coffer — Privacy Policy</h1>
-<p class="muted">Last updated: 13 July 2026</p>
+<div class="wrap">
+  <header>
+    <span class="badge">🔒 Coffer</span>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 1 September 2026</p>
+  </header>
 
-<p>Coffer is a native iPhone file manager with an encrypted Vault. This policy explains what data the app accesses and how it is handled. Coffer is designed to keep your files on your device and in the storage locations you choose.</p>
+  <p class="lead">Coffer does not collect, sell, or share your personal data. Your files stay on your device and the storage you choose. There are no accounts, no analytics, and no advertising in this version.</p>
 
-<h2>Files and folders</h2>
-<p>Coffer browses and manages files in its own storage and in the folders, drives, and servers you explicitly authorize through iOS. Coffer does <strong>not</strong> upload your files to any Coffer server and does not operate an account service. Your files stay on your device or on the storage you connect.</p>
+  <div class="card">
+    <h2>Who we are</h2>
+    <p>Coffer is a file manager and encrypted vault for iPhone and iPad. This policy explains what the app does — and does not do — with your information. It applies to the Coffer app published on the Apple App Store.</p>
+  </div>
 
-<h2>Photos</h2>
-<p>When you choose to import from Photos or save a file to Photos, Coffer accesses only the items involved in that action, on your device. Coffer does not read your photo library in the background.</p>
+  <h2>Information we collect</h2>
+  <p><strong>None.</strong> Coffer has no user accounts and no sign-in. We do not collect analytics, usage statistics, device identifiers, advertising identifiers, or crash reports on our own servers. We have no servers that receive your data.</p>
 
-<h2>Encrypted Vault and locked folders</h2>
-<p>The Vault and locked folders encrypt files on your device using AES‑256‑GCM. Encryption keys are derived from your password or stored in the iOS Keychain and never leave your device. <strong>Coffer cannot recover your password or decrypt your files for you.</strong></p>
+  <h2>Your files</h2>
+  <ul>
+    <li>Your files, folders, and their contents remain on your device or on the storage you explicitly authorize (for example a USB drive, SD card, iCloud Drive, or a WebDAV server you connect).</li>
+    <li>Coffer does <strong>not</strong> upload your files to any server operated by the developer.</li>
+    <li>The app can only access its own storage and the folders and providers you authorize through the system file picker. iOS does not allow the app to browse all of your device's storage.</li>
+  </ul>
 
-<h2>Advertising</h2>
-<p>The free version of Coffer shows ads provided by <a href="https://policies.google.com/technologies/ads">Google AdMob</a>. To serve ads, Google's SDK may collect and process device information and identifiers as described in Google's policies. In the European Economic Area, the UK, and Switzerland, Coffer presents a Google‑certified consent message (User Messaging Platform) before requesting ads, and you can change your choice at any time from Settings. Purchasing Coffer Pro removes all ads.</p>
-<p>For more information about how Google uses data, see Google's <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://support.google.com/admob/answer/9012903">how Google uses information from sites or apps that use its services</a>.</p>
+  <h2>Encryption &amp; the Vault</h2>
+  <ul>
+    <li>Coffer's Vault and locked folders use <strong>AES‑256 (AES‑GCM)</strong> encryption performed entirely on your device.</li>
+    <li>Your encryption keys are stored in the device Keychain and <strong>never leave your device</strong>. The developer cannot access, recover, or reset them.</li>
+    <li>If you delete the app or lose your device, encrypted content and its keys are gone and cannot be recovered by anyone, including the developer.</li>
+  </ul>
 
-<h2>Purchases</h2>
-<p>Coffer Pro is a one‑time purchase processed by Apple. Coffer does not receive or store your payment details.</p>
+  <h2>Connections you make (WebDAV)</h2>
+  <p>If you connect a WebDAV server, the server address and the credentials you enter are stored securely on your device and are used only to reach the server <strong>you</strong> chose. That data travels between your device and your server; it does not pass through the developer.</p>
 
-<h2>Data we do not collect</h2>
-<p>Coffer does not require an account, does not collect your name or email, and does not track you across other apps or websites. Apart from the advertising described above, Coffer does not send your personal data to Coffer‑operated servers.</p>
+  <h2>Device permissions</h2>
+  <p>Coffer asks for certain permissions only to power features you use, and only for the item you choose:</p>
+  <ul>
+    <li><strong>Photos</strong> — to import photos and videos you select, and to save items you choose back to your library.</li>
+    <li><strong>Camera</strong> — to scan paper documents into PDFs you keep in your files.</li>
+    <li><strong>Face ID / Touch ID</strong> — to unlock your encrypted Vault or locked folders on this device.</li>
+  </ul>
+  <p>Data obtained through these permissions is used locally for the stated purpose and is not transmitted to the developer.</p>
 
-<h2>Children</h2>
-<p>Coffer is not directed to children under 13. If ads are shown, they are configured according to Google's policies.</p>
+  <h2>Purchases</h2>
+  <p>Coffer offers an optional one‑time in‑app purchase (Coffer Pro). Purchases are handled entirely by Apple through the App Store. The developer never receives your payment card or billing details. Apple's handling of purchase data is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
-<h2>Your choices</h2>
-<p>You can revisit your advertising consent choice from Settings in the app. You can remove all ads by upgrading to Coffer Pro. You control which folders, drives, and servers Coffer can access, and you can remove that access at any time in the app.</p>
+  <h2>Children</h2>
+  <p>Coffer does not collect any personal information from anyone, including children. The app is rated for general audiences.</p>
 
-<h2>Contact</h2>
-<p>Questions about this policy? Contact: <strong><a href="mailto:diabali.main@gmail.com">diabali.main@gmail.com</a></strong></p>
+  <h2>Data sharing &amp; sale</h2>
+  <p>We do not share or sell your information, because we do not collect it.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes in a future version, the updated policy will be posted on this page with a new "Last updated" date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or the app? Contact: <a href="mailto:diabali.main@gmail.com">diabali.main@gmail.com</a>.</p>
+
+  <footer>
+    © 2026 Coffer. All rights reserved.
+  </footer>
+</div>
 </body>
 </html>
