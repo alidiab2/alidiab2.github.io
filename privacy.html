@@ -55,7 +55,7 @@
   <header>
     <span class="badge">🔒 Coffer</span>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 1 September 2026</p>
+    <p class="updated">Last updated: 13 September 2026</p>
   </header>
 
   <p class="lead">Coffer does not collect, sell, or share your personal data. Your files stay on your device and the storage you choose. There are no accounts, no analytics, and no advertising in this version.</p>
@@ -75,15 +75,22 @@
     <li>The app can only access its own storage and the folders and providers you authorize through the system file picker. iOS does not allow the app to browse all of your device's storage.</li>
   </ul>
 
-  <h2>Encryption &amp; the Vault</h2>
-  <ul>
-    <li>Coffer's Vault and locked folders use <strong>AES‑256 (AES‑GCM)</strong> encryption performed entirely on your device.</li>
-    <li>Your encryption keys are stored in the device Keychain and <strong>never leave your device</strong>. The developer cannot access, recover, or reset them.</li>
-    <li>If you delete the app or lose your device, encrypted content and its keys are gone and cannot be recovered by anyone, including the developer.</li>
-  </ul>
+  <h2>Encryption, backups &amp; recovery</h2>
+  <p>Coffer's Vault and locked folders use <strong>AES‑256‑GCM</strong> encryption performed on your device. Unlocking lets Coffer create a temporary readable copy for an action you choose, such as viewing, editing, or sharing. An ordinary file you export is no longer protected by the original Vault or folder encryption at its destination.</p>
+  <p>The local Vault key is stored in the device Keychain. Extra Protected mode uses device-bound key protection and device authentication. Convenient mode may allow normal system migration, but migration is not guaranteed.</p>
+  <p>You can create a password-encrypted Vault backup. The backup includes the encrypted files and the key required to restore them; that key and the backup metadata are themselves encrypted using a key derived from your backup password. You choose where the backup is saved or shared. Keep a verified copy outside Coffer and keep its password separately. Anyone who obtains both can restore its contents.</p>
+  <p>Coffer checks supported-format integrity before completing backup creation and again during restore. This cannot guarantee that another storage provider will keep the backup available. The developer cannot reset your backup password or recreate a missing key. Deleting Coffer removes its local Vault, but an intact exported backup and its password can restore the backed-up contents on another device. Changes made after the backup are not included. Vault backup export, verification, and restore do not require Coffer Pro.</p>
 
-  <h2>Connections you make (WebDAV)</h2>
-  <p>If you connect a WebDAV server, the server address and the credentials you enter are stored securely on your device and are used only to reach the server <strong>you</strong> chose. That data travels between your device and your server; it does not pass through the developer.</p>
+  <h2>Temporary files and unsaved edits</h2>
+  <p>Viewing or editing a protected file may require a decrypted working copy in Coffer's private storage. Active text-editing working copies use iOS complete file protection and are removed after successful completion or explicit discard where applicable. If the device cannot write the newest text revision, Coffer may retain it temporarily in process memory and warn you to keep the app open; closing or terminating the app can lose that memory-only revision.</p>
+
+  <h2>Servers and local-network transfers you choose</h2>
+  <p>Coffer can connect to WebDAV and FTP servers you specify. Saved passwords use the device Keychain. Files and authentication data travel between your device and the server you choose; they do not pass through a developer-operated Coffer server. WebDAV connections require HTTPS. Standard FTP is unencrypted and should be used only on a private, trusted network.</p>
+  <p>When you enable Wi‑Fi Transfer, Coffer runs an authenticated HTTP service on your local network. HTTP is not encrypted, so keep the session link private, use only a trusted network, and stop the session when finished. Unlocking a protected folder for a web session allows that authorized browser to access its readable contents. iOS may suspend the service in the background.</p>
+  <p>When you share or export a file or backup, the app, recipient, or storage provider you choose receives that data under its own privacy practices. Remote images and mathematical typesetting in Markdown documents may contact the image host or the MathJax CDN to display the document.</p>
+
+  <h2>Website video downloads</h2>
+  <p>The first App Store release (1.0) does not include a website-video browser, website-video discovery, or a website-media downloader. Playback of supported files you already have remains available.</p>
 
   <h2>Device permissions</h2>
   <p>Coffer asks for certain permissions only to power features you use, and only for the item you choose:</p>
@@ -91,6 +98,7 @@
     <li><strong>Photos</strong> — to import photos and videos you select, and to save items you choose back to your library.</li>
     <li><strong>Camera</strong> — to scan paper documents into PDFs you keep in your files.</li>
     <li><strong>Face ID / Touch ID</strong> — to unlock your encrypted Vault or locked folders on this device.</li>
+    <li><strong>Local Network</strong> — to connect to servers you choose and provide browser-based Wi‑Fi Transfer on your network.</li>
   </ul>
   <p>Data obtained through these permissions is used locally for the stated purpose and is not transmitted to the developer.</p>
 
